@@ -66,7 +66,7 @@ function CostForm(props) {
             onChange={DateChangeHandler}
             type="date"
             min="2022-01-01"
-            step="2025-01-01"
+            max="2030-12-31"
             required
           />
         </div>
