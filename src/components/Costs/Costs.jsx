@@ -2,6 +2,7 @@ import CostItem from "../CostItem/CostItem";
 import "./Costs.css";
 import CostFilter from "../CostFilter/CostFilter";
 import { useState } from "react";
+import CostDiagram from "./CostDiagram";
 
 function Costs(props) {
   const [year, setYear] = useState("2023");
@@ -29,6 +30,7 @@ function Costs(props) {
   return (
     <div className="costs">
       <CostFilter curentYear={year} onChangeYear={onChangeYear}></CostFilter>
+      <CostDiagram costs={props.costs}></CostDiagram>
       {CostItems}
     </div>
   );
