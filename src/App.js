@@ -1,27 +1,35 @@
+import { useState } from "react";
 import Costs from "./components/Costs/Costs";
 import NewCost from "./components/NewCost/NewCost";
 
+const INITIAL_COSTS = [
+  {
+    id: 1,
+    date: new Date(2022, 2, 12),
+    name: "Refregerator",
+    price: 90,
+  },
+  {
+    id: 2,
+    date: new Date(2022, 4, 16),
+    name: "Phone",
+    price: 100,
+  },
+  {
+    id: 3,
+    date: new Date(2022, 4, 20),
+    name: "Table",
+    price: 30,
+  },
+];
+
 function App() {
-  const costs = [
-    {
-      date: new Date(2021, 2, 12),
-      discription: "Refregerator",
-      amount: 90,
-    },
-    {
-      date: new Date(2021, 4, 16),
-      discription: "Phone",
-      amount: 100,
-    },
-    {
-      date: new Date(2021, 4, 20),
-      discription: "Table",
-      amount: 30,
-    },
-  ];
+  const [costs, setCosts] = useState(INITIAL_COSTS);
 
   function addCostData(value) {
-    console.log(value);
+    setCosts((prevCosts) => {
+      return [value, ...prevCosts];
+    });
   }
 
   return (

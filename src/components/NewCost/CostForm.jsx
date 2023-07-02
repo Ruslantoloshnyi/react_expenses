@@ -34,6 +34,10 @@ function CostForm(props) {
     event.preventDefault();
   }
 
+  function hideFormHandler() {
+    props.hideForm();
+  }
+
   return (
     <form onSubmit={SubmitHandler} action="">
       <div className="new-cost__controls">
@@ -73,6 +77,12 @@ function CostForm(props) {
 
         <div className="new-cost__actions">
           <button type="submit">Add expense</button>
+        </div>
+
+        <div className="new-cost__actions">
+          <button onClick={hideFormHandler} type="submit">
+            Hide form
+          </button>
         </div>
       </div>
     </form>

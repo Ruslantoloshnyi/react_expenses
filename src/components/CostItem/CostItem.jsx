@@ -6,8 +6,8 @@ function CostItem(props) {
     <div className="cost-item">
       <CostDate date={props.date}></CostDate>
       <div className="cost-item__description">
-        <h2>{props.discription}</h2>
-        <div className="cost-item__price">{props.amount}</div>
+        <h2>{props.name}</h2>
+        <div className="cost-item__price">{props.price}</div>
       </div>
     </div>
   );
