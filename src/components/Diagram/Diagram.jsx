@@ -1,4 +1,5 @@
 import DiagramBar from "./DiagramBar";
+import "./Diagram.css";
 
 function Diagram(props) {
   const dataSets = props.dataSets;
